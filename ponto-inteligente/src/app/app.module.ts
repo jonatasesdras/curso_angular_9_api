@@ -5,8 +5,10 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+//import { LoginModule } from './autenticacao/login/login.module';
+import { LoginModule, LoginRoutingModule } from './autenticacao';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    LoginModule,
+    LoginRoutingModule,
+
+    AppRoutingModule
 
   ],
   providers: [],
